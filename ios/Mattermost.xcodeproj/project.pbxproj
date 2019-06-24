@@ -86,7 +86,6 @@
 		7F72F2F0221123E200F98FFF /* GenericPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F72F2EF221123E200F98FFF /* GenericPreview.swift */; };
 		7F72F2F322112EC700F98FFF /* generic.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F72F2F222112EC700F98FFF /* generic.png */; };
 		7F7D7F98201645E100D31155 /* libReactNativePermissions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F7D7F87201645D300D31155 /* libReactNativePermissions.a */; };
-		7F88A04422270FD400DC5DE2 /* libRNSentry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F88A03C22270FB800DC5DE2 /* libRNSentry.a */; };
 		7FABDFC22211A39000D0F595 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FABDFC12211A39000D0F595 /* Section.swift */; };
 		7FABE00A2212650600D0F595 /* ChannelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FABE0092212650600D0F595 /* ChannelsViewController.swift */; };
 		7FABE04622137F5C00D0F595 /* libUploadAttachments.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FABE04522137F2A00D0F595 /* libUploadAttachments.a */; };
@@ -935,7 +934,6 @@
 				7F5CA9A0208FE3B9004F91CE /* libRNDocumentPicker.a in Frameworks */,
 				7F43D5DE1F6BF96A001FC614 /* libRCTYouTube.a in Frameworks */,
 				7F26C1CC219C463D00FEB42D /* libRNCWebView.a in Frameworks */,
-				7F88A04422270FD400DC5DE2 /* libRNSentry.a in Frameworks */,
 				7F43D6061F6BF9EB001FC614 /* libPods-Mattermost.a in Frameworks */,
 				A9B746D2CFA9CEBFB8AE2B5B /* libPods-Mattermost.a in Frameworks */,
 				5A0920184BD344979BCFCD5C /* libRCTVideo.a in Frameworks */,
