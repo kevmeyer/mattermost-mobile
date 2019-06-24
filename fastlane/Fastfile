@@ -324,6 +324,10 @@ platform :ios do
     if ENV['SYNC_PROVISIONING_PROFILES'] == 'true'
       match(type: ENV['MATCH_TYPE'] || 'adhoc')
     end
+    enable_automatic_code_signing(
+      path: './ios/Mattermost.xcodeproj',
+      use_automatic_signing: true
+    )
   end
 
   lane :replace_assets do
@@ -360,10 +364,10 @@ platform :ios do
         configuration: config_mode,
         workspace: './ios/Mattermost.xcworkspace',
         export_method: method,
-        skip_profile_detection: true,
+        # skip_profile_detection: true,
         output_name: "#{app_name_sub}.ipa",
         export_options: {
-            signingStyle: 'manual',
+            # signingStyle: 'manual',
             iCloudContainerEnvironment: 'Production'
         }
     )
