@@ -36,8 +36,8 @@ class PushNotificationUtils {
             onRegister: this.onRegisterDevice,
             onNotification: this.onPushNotification,
             onReply: this.onPushNotificationReply,
-            popInitialNotification: true,
-            requestPermissions: true,
+            popInitialNotification: false,
+            requestPermissions: false,
         });
     };
 
