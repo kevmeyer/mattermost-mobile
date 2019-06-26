@@ -760,3 +760,17 @@ lane :upload_file_to_s3 do |options|
     UI.success("S3 public path: https://#{s3_bucket}/#{s3_folder}/#{file}")
   end
 end
+
+desc 'Upload Metadata for Release'
+lane :upload_metadata do |options|
+  version_number = get_version_number(xcodeproj: './ios/Mattermost.xcodeproj', target: 'Mattermost')
+  current_build_number = get_build_number(xcodeproj: './ios/Mattermost.xcodeproj')
+
+  upload_to_app_store(
+    skip_binary_upload: true,
+    app_version: version_number,
+    build_number: current_build_number,
+    app_identifier: ENV['MAIN_APP_IDENTIFIER'] || 'com.mattermost.rnbeta',
+    overwrite_screenshots: true
+  )
+end
