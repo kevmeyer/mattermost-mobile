@@ -175,8 +175,8 @@ export const configurePushNotifications = () => {
         onRegister: onRegisterDevice,
         onNotification: onPushNotification,
         onReply: onPushNotificationReply,
-        popInitialNotification: true,
-        requestPermissions: true,
+        popInitialNotification: false,
+        requestPermissions: false,
     });
 
     if (app) {
