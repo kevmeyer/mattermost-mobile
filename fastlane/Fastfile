@@ -771,6 +771,8 @@ lane :upload_metadata do |options|
     app_version: version_number,
     build_number: current_build_number,
     app_identifier: ENV['MAIN_APP_IDENTIFIER'] || 'com.mattermost.rnbeta',
-    overwrite_screenshots: true
+    overwrite_screenshots: true,
+    app_icon: "assets/override/release/icons/ios/iTunesArtwork@2x.png",
+    screenshots_path: "fastlane/screenshots"
   )
 end
