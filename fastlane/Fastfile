@@ -25,23 +25,23 @@ before_all do |lane, options|
   end
 
   # Block to ensure we are on the right branch
-  branch = ENV['BRANCH_TO_BUILD'] || ENV['GIT_BRANCH']
-  begin
-    ensure_git_branch(
-        branch: branch
-    )
-  rescue
-    sh "git checkout #{branch}"
-    UI.success("Using branch \"#{branch}\"")
-  end
+  # branch = ENV['BRANCH_TO_BUILD'] || ENV['GIT_BRANCH']
+  # begin
+  #   ensure_git_branch(
+  #       branch: branch
+  #   )
+  # rescue
+  #   sh "git checkout #{branch}"
+  #   UI.success("Using branch \"#{branch}\"")
+  # end
 
-  # If we are going to commit changes to git create a separate branch
-  # so no changes are done in the branch that is being built
-  if ENV['COMMIT_CHANGES_TO_GIT'] == 'true'
-    local_branch = ENV['GIT_LOCAL_BRANCH'] || 'build'
-    sh "git checkout -b #{local_branch}"
-    UI.success("Creating branch \"#{local_branch}\"")
-  end
+  # # If we are going to commit changes to git create a separate branch
+  # # so no changes are done in the branch that is being built
+  # if ENV['COMMIT_CHANGES_TO_GIT'] == 'true'
+  #   local_branch = ENV['GIT_LOCAL_BRANCH'] || 'build'
+  #   sh "git checkout -b #{local_branch}"
+  #   UI.success("Creating branch \"#{local_branch}\"")
+  # end
 end
 
 after_all do |lane|
