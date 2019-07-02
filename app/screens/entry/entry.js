@@ -213,7 +213,7 @@ export default class Entry extends PureComponent {
     };
 
     launchForiOS = () => {
-        const appNotActive = AppState.currentState !== 'active';
+        const appNotActive = AppState.currentState === 'background';
 
         if (appNotActive) {
             // for iOS replying from push notification starts the app in the background
