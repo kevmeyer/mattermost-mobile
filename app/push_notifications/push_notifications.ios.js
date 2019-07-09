@@ -73,9 +73,10 @@ class PushNotification {
         this.onNotification = options.onNotification;
         this.onReply = options.onReply;
 
-        this.requestPermissions([replyCategory]);
-
-        NotificationsIOS.consumeBackgroundQueue();
+        if (options.requestPermissions) {
+            this.requestPermissions([replyCategory]);
+            NotificationsIOS.consumeBackgroundQueue();
+        }
     }
 
     requestPermissions = (permissions) => {
